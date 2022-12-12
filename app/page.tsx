@@ -1,48 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
 export default function Home() {
   return (
-    <div className="py-6">
-      <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
-        <div
-          className="hidden lg:block lg:w-1/2 bg-cover"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')`,
-          }}
-        ></div>
-        <div className="w-full p-8 lg:w-1/2">
-          <h2 className="text-2xl font-semibold text-gray-700 text-center">
-            Nfit
-          </h2>
-          <p className="text-xl text-gray-600 text-center">Bienvenido!</p>
-          <div className="mt-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
-              Usuario
-            </label>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="text"
-            />
-          </div>
-          <div className="mt-4">
-            <div className="flex justify-between">
-              <label className="block text-gray-700 text-sm font-bold mb-2">
+    <div className="h-screen bg-gradient-to-br from-blue-600 to-indigo-600 flex justify-center items-center w-full">
+      <form>
+        <div className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
+          <div className="space-y-4">
+            <h1 className="text-center text-2xl font-semibold text-gray-600">
+              Bienvanido a NFit
+            </h1>
+            <div>
+              <label
+                htmlFor="email"
+                className="block mb-1 text-gray-600 font-semibold"
+              >
+                Usuario
+              </label>
+              <input
+                type="text"
+                className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block mb-1 text-gray-600 font-semibold"
+              >
                 Contraseña
               </label>
+              <input
+                type="text"
+                className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full"
+              />
             </div>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="password"
-            />
           </div>
-          <div className="mt-8">
-            <button className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">
-              Ingresar
-            </button>
-          </div>
+          <button className="mt-4 w-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide">
+            Ingresar
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
